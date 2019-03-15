@@ -1,5 +1,7 @@
 'use strict';
+
 const Hapi   = require('hapi');
+
 const Server = new Hapi.Server();
 const Hello  = require('./lib/hello');
 
@@ -24,6 +26,7 @@ if (!module.parent) {
         if (err) {
             throw err;
         }
+
         console.log(`Server running at: ${Server.info.uri}`);
     });
 }
